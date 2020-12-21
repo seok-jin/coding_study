@@ -1,2 +1,4 @@
 # coding_study
-# 1. deep_learning_from_scratch 1
+## 개발 공부 리스트
+### index
+> 1. deep_learning_from_scratch 1 
