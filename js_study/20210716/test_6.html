@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        var para = document.getElementById('cards');
+        console.log(textContent(para));
+    </script> -->
+
+</head>
+<body>
+    <!-- html 요소의 내용을 읽고 쓰기 
+    <h1>하트</h1>
+    <p id="cards">&hearts;하트는 <em>승려</em>라는 뜻입니다.</p> -->
+
+    <p id="cards">&hearts;하트는 <em>승려</em>라는 뜻입니다.</p>
+    <script>
+        var para = document.getElementById('cards');
+        para.innerHTML = '&diams; 다이아는 <strong>상인</strong>이라는 뜻입니다.';
+        console.log(para.innerHTML);
+    </script>
+
+</body>
+</html>
