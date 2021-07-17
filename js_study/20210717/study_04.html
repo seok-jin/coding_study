@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .emphasize{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">JavaScript</h1>
+    <script>
+        var element = document.getElementById('title');
+
+        element.onmouseover = function() {
+            element.className = 'emphasize';
+        };
+
+        element.onmouseout = function() {
+            element.className = '';
+        };
+    </script>
+</body>
+</html>
