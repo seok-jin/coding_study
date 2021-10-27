@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            document.getElementById('button').onclick = function(){
+                var hp = parseFloat(document.getElementById('highpressure').value);
+                var lp = parseFloat(document.getElementById('lowpressure').value);
+                var res_ps = document.getElementById('judgement');
+                var rs_text = '';
+                if (hp < 120 && lp < 80){
+                    rs_text = '정상혈압';
+                }else if ((hp >=120 && hp < 139) || (lp>=80 && lp <89) ){
+                    rs_text = '고혈압 전단계';
+                }else{
+                    rs_text = '고혈압';
+                }
+
+                res_ps.innerHTML = rs_text;
+
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>수축기 혈압(최고혈압) : <input type="number"  id="highpressure"></p>
+    <p>이완기 혈압(최저혈압) : <input type="number"  id="lowpressure"></p>
+    <p id="judgement">이곳에 판정 결과가 표시됩니다.</p>
+    <input type="button" value="확인하기" id="button">
+</body>
+</html>

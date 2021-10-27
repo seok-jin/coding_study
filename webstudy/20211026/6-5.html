@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            document.getElementById('button').onclick = function(){
+                var hp = parseFloat(document.getElementById('low_ps').value);
+                var lp = parseFloat(document.getElementById('high_ps').value);
+                var res_ps = document.getElementById('res_ps');
+                var rs_text = '';
+                if (hp < 120 && lp < 80){
+                    rs_text = '정상혈압';
+                }else if ((hp >=120 && hp < 139) || (lp>=80 && lp <89) ){
+                    rs_text = '고혈압 전단계';
+                }else{
+                    rs_text = '고혈압';
+                }
+
+                res_ps.innerHTML = rs_text;
+
+            };
+        };
+    </script>
+</head>
+<body>
+    <input type="number" id="low_ps">
+    <input type="number" id="high_ps">
+    <input type="button" value="calc" id="button">
+    <p id="res_ps">333</p>
+</body>
+</html>
